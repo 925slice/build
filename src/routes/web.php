@@ -21,6 +21,8 @@ Route::get('/test', function () {
     return view('test');
 });
 
+Route::get('/todo', \App\Http\Controllers\Todo\IndexController::class)->name('todo.index');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
