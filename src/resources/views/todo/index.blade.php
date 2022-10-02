@@ -2,7 +2,9 @@
     <x-slot name="title">
         タスク管理
     </x-slot>
-    <h1 class="underline"><a href="">タスク管理</a></h1>
+    <x-slot name="app">
+        タスク管理
+    </x-slot>
     <a href="">[新規登録]</a>
 
     <ul>
@@ -13,7 +15,7 @@
                     <form action="" method="post">
                         @method('PATCH')
                         @csrf
-                        <button class="text-red-500">完了</button>
+                        <button class="text-red-600">完了</button>
                     </form>
                 @else
                     <p class="line-through">{{ $todo->content}}</p>
