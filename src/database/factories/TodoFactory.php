@@ -19,7 +19,7 @@ class TodoFactory extends Factory
         return [
             'content' => $this->faker->realText(10),
             'check' => $this->faker->randomElement([0, 1]),
-            'user_id' => $this->faker->numberBetween(1,3),
+            'user_id' => $this->faker->numberBetween(1, 3),
         ];
     }
 }
